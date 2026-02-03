@@ -1,0 +1,32 @@
+﻿<Window x:Class="Filmy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Filmy"
+        mc:Ignorable="d"
+        Title="Filmy - Do Obejrzenia" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" Margin="10">
+            <TextBlock Text="Do Obejrzenia" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+            <ListBox x:Name="MovieListBox" Background="#F5F5F5" BorderThickness="1" BorderBrush="#CCCCCC">
+                <ListBoxItem>Inception</ListBoxItem>
+                <ListBoxItem>The Shawshank Redemption</ListBoxItem>
+                <ListBoxItem>Interstellar</ListBoxItem>
+                <ListBoxItem>The Dark Knight</ListBoxItem>
+                <ListBoxItem>Pulp Fiction</ListBoxItem>
+            </ListBox>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Margin="10" VerticalAlignment="Top">
+            <Button x:Name="AddButton" Content="Dodaj" Height="40" Margin="0,0,0,10" Background="#4CAF50" Foreground="White" FontWeight="Bold" Cursor="Hand" Click="AddButton_Click"/>
+            <Button x:Name="RemoveButton" Content="Usun" Height="40" Margin="0,0,0,10" Background="#F44336" Foreground="White" FontWeight="Bold" Cursor="Hand" Click="RemoveButton_Click"/>
+            <Button x:Name="FilterButton" Content="Filtr" Height="40" Background="#2196F3" Foreground="White" FontWeight="Bold" Cursor="Hand" Click="FilterButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
